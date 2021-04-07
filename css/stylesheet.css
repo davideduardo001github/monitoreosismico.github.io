@@ -1,0 +1,155 @@
+
+/* #region TOP BAR AND TITLE*/
+  p {
+    display: inline-block;
+  }
+  .titlebar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-left: 4%;
+  }
+
+  .titlebar h1{
+    font-size: 40px;
+    display: inline-block; 
+    text-transform: uppercase;
+    border-top: black solid 2px;
+    border-bottom: black solid 2px;
+    margin-left: 20px;
+  }
+
+  /* Style for images in head of the page */
+    .titlebar img{
+      display: inline-block;
+      justify-content: left;
+      height: 50px;
+      margin-right: 20px;
+    }
+
+    /* Style for TopNav conteiner */
+    #navbar{
+      display: inline-flex;
+      width: 100%;
+      background-color: #a90101;
+      text-align: left;
+    }
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    .sticky + .content {
+      padding-top: 60px;
+    }
+
+
+  /* Style the topnav links */
+  #navbar a {
+    margin-left: 28px;
+    margin-right: 40px;
+    display: inline-block;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Change color on hover */
+  #navbar a:hover {
+    background-color: #ddd;
+    height: fit-content;
+    color: black;
+}
+
+/* #endregion */
+/* #region BODY */
+  /* Style the content */
+  * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .content {
+    margin-top: 3%;
+    text-align: justify;
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-left: 4%;
+  }
+  .mainContent {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 6%;
+    vertical-align: top;
+  }
+  .map {
+    text-align: center;
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 40%;
+  }
+
+/* #endregion */
+
+/* #region FOOTER */
+  /* Style the footer */
+  footer {
+    display: inline-flex;
+    width: 100%;
+    background-color: #a90101;
+    text-align: left;
+    color:  #f2f2f2;
+  }
+  footer div{
+    display: inline-block;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  footer div a{
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  footer div a:hover{
+    text-decoration: none;
+    color: #b8b4b4;
+  }
+ 
+
+/* #endregion FOOTER */
+
+/* #region TABLE */
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+/* #endregion TABLE*/
+
+/* #region INTERACTION */
+  #info {
+    display: inline-block;
+  }
+  #status {
+    display: none;
+  }
+  #config {
+    display: none;
+  }
+/* #endregion INTERACTION */
