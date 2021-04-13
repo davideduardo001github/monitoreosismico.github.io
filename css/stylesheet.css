@@ -1,8 +1,10 @@
+/* #region GENERAL PROPIERTIES */
+  h2 {
+    text-transform: uppercasemap;
+  }
+/* #endregion */
 
 /* #region TOP BAR AND TITLE*/
-  p {
-    display: inline-block;
-  }
   .titlebar{
     display: flex;
     width: 92%;
@@ -87,7 +89,7 @@
   }
   .mainContent {
     display: inline-block;
-    width: 50%;
+    width: 55%;
     margin-bottom: 6%;
     vertical-align: top;
   }
@@ -95,9 +97,9 @@
     align-content: center;
     text-align: center;
     display: inline-block;
-    margin-left: 5%;
-    margin-top: 10%;
-    width: 40%;
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 25%;
   }
 
 /* #endregion */
@@ -147,6 +149,7 @@
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
 /* #endregion TABLE*/
 
 /* #region INTERACTION */
@@ -158,6 +161,15 @@
   }
   #config {
     display: none;
+  }
+  #about {
+    display: none;
+    text-align: justify;
+  }
+
+  #about img{
+    float:right;
+    margin-left: 40px;
   }
 
   /* Delegation Names Hover Interaction */

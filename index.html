@@ -35,7 +35,6 @@
             <!-- Sección INFORMACIÓN Y LECTURAS -->
             <div class = "mainContent" id="info">
                 <h2>Lecturas registradas por las estaciones</h2>
-                <p>
                     <table>
                         <tr>
                             <th>Valor pico</th>
@@ -107,7 +106,6 @@
                             
                         </tr>
                     </table>
-                </p>
             </div>
             <!-- Sección ESTATUS DE LAS ESTACIONES -->
             <div class = "mainContent" id="status">
@@ -220,8 +218,8 @@
 
             <!-- Sección CONFIGURACIÓN DE LAS ESTACIONES -->
             <div class = "mainContent" id="config">
+                <h2>Configuración de parámetros en las estaciones</h2>
                 <table>
-                    <h2>Configuración de parámetros en las estaciones</h1>
                     <form action="/action_page.php">
                         <label for="fname">Estación:</label>
                         <input type="text" id="fname" name="fname" value="GAM"><br><br>
@@ -243,28 +241,25 @@
 
             <!-- Sección Acerca de nosotros -->
             <div class = "mainContent" id="about">
-                <table>
-                    <h2>Configuración de parámetros en las estaciones</h1>
-                    <form action="/action_page.php">
-                        <label for="fname">Estación:</label>
-                        <input type="text" id="fname" name="fname" value="GAM"><br><br>
-                        <label for="lname">Canal:</label>
-                        <input type="text" id="lname" name="lname" value="BHZ"><br><br>
-                        <label for="fname">Red:</label>
-                        <input type="text" id="fname" name="fname" value="RI"><br><br>
-                        <label for="fname">DataLinkPort:</label>
-                        <input type="text" id="fname" name="fname" value="16000"><br><br>
-                        <label for="fname">SeedLinkPort:</label>
-                        <input type="text" id="fname" name="fname" value="17000"><br><br>
-                        <label for="fname">ServerID:</label>
-                        <input type="text" id="fname" name="fname" value="INPRES Ring Server"><br><br>
-                        <input type="submit" value="Submit">
-                      </form>
+                <h2>Acerca de nosotros</h2>
+                <img src="./pics/electronica.jpg" alt="UNAM Logo">                
+                <div id="rightAbout">
+                    <p>
+                        La coordinación de Electrónica tiene su origen en la coordinación de Instrumentación la que hasta fines de los años 70 funcionaba como una unidad de servicio y apoyo técnico a otras coordinaciones del Instituto y se eleva a la categoría de coordinación a partir de la consecución y realización de una serie de proyectos donde destacaron la automatización y el control utilizando en aparatos electrónicos de terceros y que con el tiempo se logró el desarrollo de estos internamente. 
+                    </p>
+                       
+                    <h3>Integrantes del proyecto</h3>
+                    <ul>
+                        <li>MI. Lauro Santiago Cruz - Coordinador del proeycto</li>
+                        <li>Benjamin</li>
+                        <li>Julio</li>
+                        <li>Norman</li>
+                        <li>David</li>
+                    </ul>
                     
-                  </table>
+                </div>
             </div>
     
-
             <!-- Sección MAPA -->
             <div class = "map">
                 <svg viewBox="0 0 600 800"
@@ -530,7 +525,7 @@
 
         <footer>
             <div class="footinfo">
-                <p>Última Actualización: 2021 Instituto de Ingeniería UNAM. ©Todos los derechos UNAM 2021. | <a href="#">Contacto</a> | <a href="#">Aviso de privacidad</a> 
+                <p>Instituto de Ingeniería UNAM. ©Todos los derechos UNAM 2021. Última Actualización: Abril 2021<p/>
             </div>
         </footer>
     </body>
