@@ -35,7 +35,7 @@
 
   
   
-  function stickBar() {
+  /* function stickBar() {
     var sticky = document.getElementById("navbar").offsetTop;
     console.log(window.pageYOffset)
     console.log(sticky)
@@ -45,4 +45,4 @@
     } else {
       navbar.classList.remove("sticky");
     }
-  }
+  } */
