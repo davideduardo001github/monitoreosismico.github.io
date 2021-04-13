@@ -5,63 +5,69 @@
   }
   .titlebar{
     display: flex;
-    width: 100%;
-    align-items: center;
-    text-align: center;
+    width: 92%;
     margin-left: 4%;
+    margin-right: 4%;
+    justify-content: space-between;
+    vertical-align: top;
   }
 
   .titlebar h1{
-    font-size: 40px;
+    font-size: 30px;
     display: inline-block; 
     text-transform: uppercase;
     border-top: black solid 2px;
     border-bottom: black solid 2px;
-    margin-left: 20px;
-  }
-
-  /* Style for images in head of the page */
-    .titlebar img{
-      display: inline-block;
-      justify-content: left;
-      height: 50px;
-      margin-right: 20px;
-    }
-
-    /* Style for TopNav conteiner */
-    .topnav{
-      display: inline-flex;
-      width: 100%;
-      background-color: #a90101;
-      text-align: left;
-    }
-    .sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
-    
-    .sticky + .content {
-      padding-top: 60px;
-    }
-
-
-  /* Style the topnav links */
-  .topnav a {
-    margin-left: 28px;
-    margin-right: 40px;
-    display: inline-block;
-    color: #f2f2f2;
-    text-transform: uppercase;
-    padding: 20px 40px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
+    margin-top: 6px;
     text-align: center;
   }
 
+  /* Style for images in head of the page */
+  .titlebar img{
+    display: inline-block;
+    height: 50px;
+  }
+
+  /* Style for TopNav conteiner */
+  #navbar{
+    position: sticky;
+    display: flex;
+    background-color: #a90101;
+    width: 100%;
+  }
+  #navbar div{
+    display: flex;
+    margin-left: 4%;
+    width: 92%;
+    margin-right: 4%;
+    justify-content: center;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+  }
+  
+  .sticky + .content {
+    padding-top: 2000px;
+  }
+
+
+  /* Style the topnav links */
+    #navbar a {
+      display: inline-block;
+      color: #f2f2f2;
+      text-transform: uppercase;
+      padding: 20px 40px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      width: 400px;
+      height: fit-content;
+    }
+
   /* Change color on hover */
-  .topnav a:hover {
+  #navbar a:hover {
     background-color: #ddd;
     height: fit-content;
     color: black;
@@ -71,16 +77,13 @@
 /* #region BODY */
   /* Style the content */
   * {
-    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
   }
   .content {
-    margin-top: 3%;
-    text-align: justify;
-    display: block;
-    height: auto;
-    width: 100%;
+    margin-top: 40px;
+    width: 92%;
     margin-left: 4%;
+    margin-right: 4%;
   }
   .mainContent {
     display: inline-block;
@@ -89,10 +92,11 @@
     vertical-align: top;
   }
   .map {
+    align-content: center;
     text-align: center;
     display: inline-block;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 10%;
     width: 40%;
   }
 
@@ -108,9 +112,12 @@
     color:  #f2f2f2;
   }
   footer div{
+    position: sticky;
     display: inline-block;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 4%;
+    margin-right: 4%;
+    /* margin-left: 80px; */
+    bottom: 0;
   }
   footer div a{
     text-decoration: none;
@@ -151,5 +158,33 @@
   }
   #config {
     display: none;
+  }
+
+  /* Delegation Names Hover Interaction */
+  /* Tooltip container */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
   }
 /* #endregion INTERACTION */
