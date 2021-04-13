@@ -21,17 +21,20 @@
             </div>
             
             <div id="navbar">
-                <a onclick="sismReplace()">Ultimas lecturas de las estaciones</a>
-                <a onclick="statReplace()">Estatus de las estaciones</a>
-                <a onclick="confReplace()">Configuración de las estaciones</a>            
+                <div>
+                    <a onclick="sismReplace()">Lecturas registradas</a>
+                    <a onclick="statReplace()">Estatus de las estaciones</a>
+                    <a onclick="confReplace()">Configuración de estaciones</a>
+                    <a onclick="aboutReplace()">Acerca de Nosotros</a> 
+                </div>
+                       
             </div>
         </header>
 
         <div class="content" id="content">
-
             <!-- Sección INFORMACIÓN Y LECTURAS -->
-            
             <div class = "mainContent" id="info">
+                <h2>Lecturas registradas por las estaciones</h2>
                 <p>
                     <table>
                         <tr>
@@ -40,7 +43,6 @@
                             <th>Fecha</th>
                             <th>Hora</th>
                             <th>Latitud, Longitud</th>
-                            <th>Profundidad</th>
                         </tr>
                         <tr>
                           <td>3.8</td>
@@ -48,7 +50,6 @@
                           <td>2021-04-02</td>
                           <td>4:46:21</td>
                           <td>14.78° -93.76°</td>
-                          <td>13 KM</td>
                         </tr>
                         <tr>
                             <td>3.8</td>
@@ -56,7 +57,6 @@
                             <td>2021-04-02</d>
                             <td>4:46:21</td>
                             <td>14.78° -93.76°</td>
-                            <td>13 KM</td>
                         </tr>
                         <tr>
                             <td>3.8</td>
@@ -64,7 +64,7 @@
                             <td>2021-04-02</td>
                             <td>4:46:21</td>
                             <td>14.78° -93.76°</td>
-                            <td>13 KM</td>
+                            
                         </tr>
                         <tr>
                             <td>3.8</td>
@@ -72,7 +72,7 @@
                             <td>2021-04-02</td>
                             <td>4:46:21</td>
                             <td>14.78° -93.76°</td>
-                            <td>13 KM</td>
+                            
                         </tr>
                         <tr>
                           <td>3.8</td>
@@ -80,7 +80,7 @@
                           <td>2021-04-02</td>
                           <td>4:46:21</td>
                           <td>14.78° -93.76°</td>
-                          <td>13 KM</td>
+                          
                         </tr>
                         <tr>
                             <td>3.8</td>
@@ -88,7 +88,7 @@
                             <td>2021-04-02</td>
                             <td>4:46:21</td>
                             <td>14.78° -93.76°</td>
-                            <td>13 KM</td>
+                            
                         </tr>
                         <tr>
                             <td>3.8</td>
@@ -96,7 +96,7 @@
                             <td>2021-04-02</td>
                             <td>4:46:21</td>
                             <td>14.78° -93.76°</td>
-                            <td>13 KM</td>
+                            
                         </tr>
                         <tr>
                             <td>3.8</td>
@@ -104,13 +104,14 @@
                             <td>2021-04-02</td>
                             <td>4:46:21</td>
                             <td>14.78° -93.76°</td>
-                            <td>13 KM</td>
+                            
                         </tr>
                     </table>
                 </p>
             </div>
             <!-- Sección ESTATUS DE LAS ESTACIONES -->
             <div class = "mainContent" id="status">
+                <h2>Estatus de las estaciones</h2>
                 <table>
                     <tr>
                         <th>ID</th>
@@ -122,97 +123,97 @@
                       <td>01</td>
                       <td>Álvaro Obregón</td>
                       <td>Activo</td>
-                      <td></td>
+                      <td>2:41</td>
                     </tr>
                     <tr>
                         <td>02</td>
                         <td>Azcapotzalco</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>2:26</td>
                     </tr>
                     <tr>
                         <td>03</td>
                         <td>Benito Juárez</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>04</td>
                         <td>Coyoacán</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>10:41 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>05</td>
                         <td>Cuajimalpa de Morelos</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>09:02</td>
                     </tr>
                     <tr>
                         <td>06</td>
                         <td>Cuauhtémoc</td>
                         <td>Inactivo</td>
-                        <td></td>
+                        <td>19:23 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>07</td>
                         <td>Gustavo A. Madero</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>08</td>
                         <td>Iztacalco</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>18:28</td>
                     </tr>
                     <tr>
                         <td>09</td>
                         <td>Iztapalapa</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>Magdalena Contreras</td>
                         <td>Requiere atención</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>11</td>
                         <td>Miguel Hidalgo</td>
                         <td>Inactivo</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>12</td>
                         <td>Milpa Alta</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>13</td>
                         <td>Tláhuac</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>14</td>
                         <td>Tlalpan</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>15</td>
                         <td>Venustiano Carranza</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                     <tr>
                         <td>16</td>
                         <td>Xochimilco</td>
                         <td>Activo</td>
-                        <td></td>
+                        <td>9:18 21/04/2021</td>
                     </tr>
                 </table>
             </div>
@@ -220,7 +221,7 @@
             <!-- Sección CONFIGURACIÓN DE LAS ESTACIONES -->
             <div class = "mainContent" id="config">
                 <table>
-                    <h2>Configuración de parámetros</h1>
+                    <h2>Configuración de parámetros en las estaciones</h1>
                     <form action="/action_page.php">
                         <label for="fname">Estación:</label>
                         <input type="text" id="fname" name="fname" value="GAM"><br><br>
@@ -239,6 +240,30 @@
                     
                   </table>
             </div>
+
+            <!-- Sección Acerca de nosotros -->
+            <div class = "mainContent" id="about">
+                <table>
+                    <h2>Configuración de parámetros en las estaciones</h1>
+                    <form action="/action_page.php">
+                        <label for="fname">Estación:</label>
+                        <input type="text" id="fname" name="fname" value="GAM"><br><br>
+                        <label for="lname">Canal:</label>
+                        <input type="text" id="lname" name="lname" value="BHZ"><br><br>
+                        <label for="fname">Red:</label>
+                        <input type="text" id="fname" name="fname" value="RI"><br><br>
+                        <label for="fname">DataLinkPort:</label>
+                        <input type="text" id="fname" name="fname" value="16000"><br><br>
+                        <label for="fname">SeedLinkPort:</label>
+                        <input type="text" id="fname" name="fname" value="17000"><br><br>
+                        <label for="fname">ServerID:</label>
+                        <input type="text" id="fname" name="fname" value="INPRES Ring Server"><br><br>
+                        <input type="submit" value="Submit">
+                      </form>
+                    
+                  </table>
+            </div>
+    
 
             <!-- Sección MAPA -->
             <div class = "map">
