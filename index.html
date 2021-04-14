@@ -224,17 +224,83 @@
                 <h2>Configuración de parámetros en las estaciones</h2>
                 <table>
                     <form action="/action_page.php">
-                        <label for="fname">Estación:</label>
-                        <input type="text" id="fname" name="fname" value="GAM"><br><br>
-                        <label for="lname">Canal:</label>
+                        <label for="fname">Estación: </label>
+                        <select name="cars" id="cars">
+                            <optgroup label="Álvaro Obregón">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                              <optgroup label="Azcapotzalco">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                              </optgroup>
+                            <optgroup label="Benito Juárez">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Coyoacán">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Cuajimalpa de Morelos">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Cuauhtémoc">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Gustavo A. Madero">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Iztacalco">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Iztapalapa">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Magdalena Contreras">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Miguel Hidalgo">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Milpa Alta">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Tláhuac">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Tlalpan">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Venustiano Carranza">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                            <optgroup label="Xochimilco">
+                                <option value="estacion01">Estacion 01</option>
+                                <option value="estacion02">Estacion 02</option>
+                            </optgroup>
+                        </select>
+                        <br><br>
+                        <label for="lname">Canal: </label>
                         <input type="text" id="lname" name="lname" value="BHZ"><br><br>
-                        <label for="fname">Red:</label>
+                        <label for="fname">Red: </label>
                         <input type="text" id="fname" name="fname" value="RI"><br><br>
-                        <label for="fname">DataLinkPort:</label>
+                        <label for="fname">DataLinkPort: </label>
                         <input type="text" id="fname" name="fname" value="16000"><br><br>
-                        <label for="fname">SeedLinkPort:</label>
+                        <label for="fname">SeedLinkPort: </label>
                         <input type="text" id="fname" name="fname" value="17000"><br><br>
-                        <label for="fname">ServerID:</label>
+                        <label for="fname">ServerID: </label>
                         <input type="text" id="fname" name="fname" value="INPRES Ring Server"><br><br>
                         <input type="submit" value="Submit">
                       </form>
@@ -528,4 +594,3 @@
     </body>
    
 </html>
-
