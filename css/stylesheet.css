@@ -96,12 +96,30 @@
     vertical-align: top;
   }
 
-  #map {
-    display: inline-block;
-    margin-left: 10%;
-    margin-top: 5%;
-    width: 30%;
-  }
+/* #endregion */
+
+/* #region MapSection */
+#mapRegion {
+  display: inline-block;
+  margin-top: 1%;
+  margin-left: 5%;
+  width: 36%;
+}
+#mapInfo {
+  display: block;
+  width: 100%;
+  margin-bottom: 50px;
+  background-color: #dddddd;
+  padding:1%;
+}
+#mapInfo span{
+  font-weight: bold;
+}
+#map {
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+}
 
 /* #endregion */
 
