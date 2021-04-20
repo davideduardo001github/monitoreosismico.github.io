@@ -1,9 +1,16 @@
 path:hover{
-      fill:red;
+      opacity: 0.75;
    }
 path{
       fill: rgb(205, 218, 224); fill-opacity: 1; fill-rule: evenodd; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;
    }
+#TextMap{
+   user-select: none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+}
 #GAM{
    fill: rgb(119, 207, 124);
 }
