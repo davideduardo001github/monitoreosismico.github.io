@@ -40,45 +40,34 @@
     justify-content: center;
   }
 
-  .sticky {
-    position: fixed;
-    top: 0;
-  }
-  
-  .sticky + .content {
-    padding-top: 2000px;
-  }
-
-
   /* Style the topnav links */
-  #navbar a {
-      display: inline-block;
-      color: #f2f2f2;
-      text-transform: uppercase;
-      padding: 20px 40px;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      width: 25%;
-    }
+  #navbar a{
+    display: inline-block;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 25%;
+  }
 
   /* Change color on hover */
   #navbar a:hover {
     background-color: #ddd;
     height: fit-content;
     color: black;
-}
+  }
 
 /* #endregion */
 /* #region BODY */
   /* Style the content */
-  
-  * {
+  *{
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  h2 {
+  h2{
     text-transform: uppercasemap;
   }
 
@@ -96,30 +85,50 @@
     vertical-align: top;
   }
 
+  .FullPic {
+    width: 100%;
+  }
 /* #endregion */
 
 /* #region MapSection */
-#mapRegion {
-  display: inline-block;
-  margin-top: 1%;
-  margin-left: 5%;
-  width: 36%;
-}
-#mapInfo {
-  display: block;
-  width: 100%;
-  margin-bottom: 50px;
-  background-color: #dddddd;
-  padding:1%;
-}
-#mapInfo span{
-  font-weight: bold;
-}
-#map {
-  display: block;
-  width: 100%;
-  padding-left: 10px;
-}
+  #mapRegion {
+    display: inline-block;
+    margin: auto;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    width: 36%;
+    border: 2px solid #dddddd;
+  }
+  #mapInfo {
+    display: block;
+    width: 67%;
+    margin:auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    /* border: 2px solid #dddddd; */
+  }
+  #mapInfo span{
+    font-weight: bold;
+  }
+  #map {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  path:hover{
+    opacity: 0.75;
+ }
+  path{
+      fill: rgb(205, 218, 224); fill-opacity: 1; fill-rule: evenodd; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;
+  }
+  #TextMap{
+  pointer-events: none;
+  }
 
 /* #endregion */
 
@@ -162,8 +171,15 @@
     width: 100%;
     vertical-align: text-top;
   }
-
-  td, th {
+  th {
+    text-align: left;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #bd412b;
+    color: white;
+  }
+  td{
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
@@ -191,6 +207,10 @@
   #about {
     display: none;
     text-align: justify;
+  }
+
+  #acceso {
+    display: none;
   }
 
   #about img{
@@ -240,34 +260,13 @@
     visibility: visible;
   }
 
-
   /* Dots of Active - Green, Yellow, Red*/
-  .gDot {
+  .Dot {
     height: 10px;
     width: 10px;
-    background-color: rgb(119, 207, 124);
+    background-color: rgb(119, 126, 120);
     border-radius: 50%;
     display: inline-block;
     margin-right: 6px;
   }
-
-  .yDot {
-    height: 10px;
-    width: 10px;
-    background-color: hsl(46, 100%, 67%);
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 6px;
-  }
-
-  .rDot {
-    height: 10px;
-    width: 10px;
-    background-color: rgb(219, 49, 77);
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 6px;
-  }
-  
-  
 /* #endregion INTERACTION */
