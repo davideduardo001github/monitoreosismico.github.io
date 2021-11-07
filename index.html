@@ -25,7 +25,6 @@
                 <div>
                     <a onclick= "windowSwitch(1)";>Lecturas registradas</a>
                     <a onclick= "windowSwitch(2)";>Estatus de las estaciones</a>
-                    <a onclick= "windowSwitch(5)";>Configuración de estaciones</a>
                     <a onclick= "windowSwitch(4)";>Acerca de Nosotros</a> 
                 </div
                        
@@ -36,6 +35,8 @@
             <!-- Sección INFORMACIÓN Y LECTURAS -->
             <div class = "mainContent" id="info">
                 <h2 class="tooltip">Lecturas registradas por las estaciones</h2>
+
+                <p><b>Última actualización: </b> <span id="dateUpdate2"></span></p>
 
                     <table id="headInfo"">
                         <tr>
@@ -60,126 +61,123 @@
             <!-- Sección ESTATUS DE LAS ESTACIONES -->
             <div class = "mainContent" id="status">
                 <h2>Estatus de las estaciones</h2>
+                <p><b>Última actualización: </b> <span id="dateUpdate"></span></p>
                 <table>
-                    <tr>
-                        <th>ID</th>
+                    <tr> 
                         <th>Delegación</th>
                         <th>Estado</th>
                         <th>Último registro</th>
                         <th>Localización</th>
                     </tr>
                     <tr>
-                        <td id="1Id">01</td>
-                        <td id="1Name">Álvaro Obregón</td>
-                        <td><div id="1Status"><span class="Dot" id="1Dot"></span>Inactivo</div></td>
-                        <td id="1Time">02:41 22/04/2021</td>
-                        <td id="1Location">14.78° -93.76°</td>
+                        <td id="1Id"></td>
+                        <td id="1Name"></td>
+                        <td>
+                            <div>
+                                <span id="1Status"></span>
+                                <span class="Dot" id="1Dot"> </span>
+                            </div>  
+                        </td>
+                        <td id="1Time"></td>
+                        <td id="1Location"></td>
                     </tr>
                     <tr>
-                        <td id="2Id">02</td>
-                        <td id="2Name">Azcapotzalco</td>
-                        <td><div id="2Status"><span class="Dot" id="2Dot"></span>Activo</div></td>
-                        <td id="2Time">02:26 22/04/2021</td>
-                        <td id="2Location">14.78° -93.76°</td>
+                        <td id="2Id"></td>
+                        <td id="2Name"></td>
+                        <td>
+                            <div>
+                                <span id="2Status"></span>
+                                <span class="Dot" id="2Dot"> </span>
+                            </div>  
+                        </td>
+                        <td id="2Time"></td>
+                        <td id="2Location"></td>
                     </tr>
                     <tr>
-                        <td id="3Id">03</td>
-                        <td id="3Name">Benito Juárez</td>
-                        <td><div id="3Status"><span class="Dot" id="3Dot"></span>Activo</div></td>
-                        <td id="3Time">09:18 21/04/2021</td>
-                        <td id="3Location">14.78° -93.76°</td>
+                        <td id="3Id"></td>
+                        <td id="3Name"></td>
+                        <td>
+                            <div>
+                                <span id="3Status"></span>
+                                <span class="Dot" id="3Dot"> </span>
+                            </div>  
+                        </td>
+                        <td id="3Time"></td>
+                        <td id="3Location"></td>
                     </tr>
                     <tr>
-                        <td id="4Id">04</td>
-                        <td id="4Name">Coyoacán</td>
-                        <td><div id="4Status"><span class="Dot" id="4Dot"></span>Activo</div></td>
-                        <td id="4Time">10:41 21/04/2021</td>
-                        <td id="4Location">14.78° -93.76°</td>
+                        <td id="4Id"></td>
+                        <td id="4Name"></td>
+                        <td>
+                            <div>
+                                <span id="4Status"></span>
+                                <span class="Dot" id="4Dot"> </span>
+                            </div>  
+                        </td>
+                        <td id="4Time"></td>
+                        <td id="4Location"></td>
                     </tr>
                     <tr>
-                        <td id="5Id">05</td>
-                        <td id="5Name">Cuajimalpa de Morelos</td>
-                        <td><div id="5Status"><span class="Dot" id="5Dot"></span>Activo</div></td>
-                        <td id="5Time">09:02 22/04/2021</td>
-                        <td id="5Location">14.78° -93.76°</td>
+                        <td id="5Id"></td>
+                        <td id="5Name"></td>
+                        <td>
+                            <div>
+                                <span id="5Status"></span>
+                                <span class="Dot" id="5Dot"> </span>
+                            </div>  
+                        </td>
+                        <td id="5Time"></td>
+                        <td id="5Location"></td>
                     </tr>
                     <tr>
-                        <td id="6Id">06</td>
-                        <td id="6Name">Cuauhtémoc</td>
-                        <td><div id="6Status"><span class="Dot" id="6Dot"></span>Inactivo</div></td>
-                        <td id="6Time">19:23 21/04/2021</td>
-                        <td id="6Location">14.78° -93.76°</td>
+                        <td id="6Id"></td>
+                        <td id="6Name"></td>
+                        <td>
+                            <div>
+                                <span id="6Status"></span>
+                                <span class="Dot" id="6Dot"> </span>
+                            </div>  
+                        </td>
+                        <td id="6Time"></td>
+                        <td id="6Location"></td>
                     </tr>
                     <tr>
-                        <td id="7Id">07</td>
-                        <td id="7Name">Gustavo A. Madero</td>
-                        <td><div id="7Status"><span class="Dot" id="7Dot"></span>Activo</div></td>
-                        <td id="7Time">09:18 21/04/2021</td>
-                        <td id="7Location">14.78° -93.76°</td>
+                        <td id="7Id"></td>
+                        <td id="7Name"></td>
+                        <td>
+                            <div>
+                                <span id="7Status"></span>
+                                <span class="Dot" id="7Dot"> </span>
+                            </div>  
+                        </td>
+                        <td id="7Time"></td>
+                        <td id="7Location"></td>
                     </tr>
                     <tr>
-                        <td id="8Id">08</td>
-                        <td id="8Name">Iztacalco</td>
-                        <td><div id="8Status"><span class="Dot" id="8Dot"></span>Activo</div></td>
-                        <td id="8Time">18:28 22/04/2021</td>
-                        <td id="8Location">14.78° -93.76°</td>
+                        <td id="8Id"></td>
+                        <td id="8Name"></td>
+                        <td>
+                            <div>
+                                <span id="8Status"></span>
+                                <span class="Dot" id="8Dot"> </span>
+                            </div>  
+                        </td>
+                        <td id="8Time"></td>
+                        <td id="8Location"></td>
                     </tr>
                     <tr>
-                        <td id="9Id">09</td>
-                        <td id="9Name">Iztapalapa</td>
-                        <td><div id="9Status"><span class="Dot" id="9Dot"></span>Activo</div></td>
-                        <td id="9Time">09:18 21/04/2021</td>
-                        <td id="9Location">14.78° -93.76°</td>
+                        <td id="9Id"></td>
+                        <td id="9Name"></td>
+                        <td>
+                            <div>
+                                <span id="9Status"></span>
+                                <span class="Dot" id="9Dot"> </span>
+                            </div>  
+                        </td>
+                        <td id="9Time"></td>
+                        <td id="9Location"></td>
                     </tr>
-                    <tr>
-                        <td id="10Id">10</td>
-                        <td id="10Name">Magdalena Contreras</td>
-                        <td><div id="10Status"><span class="Dot" id="10Dot"></span>Requiere atención</div></td>
-                        <td id="10Time">09:18 21/04/2021</td>
-                        <td id="10Location">14.78° -93.76°</td>
-                    </tr>
-                    <tr>
-                        <td id="11Id">11</td>
-                        <td id="11Name">Miguel Hidalgo</td>
-                        <td><div id="11Status"><span class="Dot" id="11Dot"></span>Inactivo</div></td>
-                        <td id="11Time">09:18 21/04/2021</td>
-                        <td id="11Location">14.78° -93.76°</td>
-                    </tr>
-                    <tr>
-                        <td id="12Id">12</td>
-                        <td id="12Name">Milpa Alta</td>
-                        <td><div id="12Status"><span class="Dot" id="12Dot"></span>Activo</div></td>
-                        <td id="12Time">09:18 21/04/2021</td>
-                        <td id="12Location">14.78° -93.76°</td>
-                    </tr>
-                    <tr>
-                        <td id="13Id">13</td>
-                        <td id="13Name">Tláhuac</td>
-                        <td><div id="13Status"><span class="Dot" id="13Dot"></span>Activo</div></td>
-                        <td id="13Time">09:18 21/04/2021</td>
-                        <td id="13Location">14.78° -93.76°</td>
-                    </tr>
-                    <tr>
-                        <td id="14Id">14</td>
-                        <td id="14Name">Tlalpan</td>
-                        <td><div id="14Status"><span class="Dot" id="14Dot"></span>Inactivo</div></td>
-                        <td id="14Time">09:18 21/04/2021</td>
-                        <td id="14Location">14.78° -93.76°</td>
-                    </tr>
-                    <tr>
-                        <td id="15Id">15</td>
-                        <td id="15Name">Venustiano Carranza</td>
-                        <td><div id="15Status"><span class="Dot" id="15Dot"></span>Activo</div></td>
-                        <td id="15Time">09:18 21/04/2021</td>
-                        <td id="15Location">14.78° -93.76°</td>
-                    </tr>
-                    <tr>
-                        <td id="16Id">16</td>
-                        <td id="16Name">Xochimilco</td>
-                        <td><div id="16Status"><span class="Dot" id="16Dot"></span>Requiere atención</div></td>
-                        <td id="16Time">09:18 21/04/2021</td>
-                        <td id="16Location">14.78° -93.76°</td>
-                    </tr>
+
                 </table>
             </div>
 
@@ -579,7 +577,7 @@
         <!-- Pié de página -->
         <footer>
             <div class="footinfo">
-                <p>Instituto de Ingeniería UNAM. ©Todos los derechos UNAM 2021. Última Actualización: Mayo 2021<p/>
+                <p>Instituto de Ingeniería UNAM. ©Todos los derechos UNAM 2021. Última Actualización Página Web: Septiembre 2021<p/>
             </div>
         </footer>
     </body>

@@ -193,11 +193,11 @@
 
 /* #region INTERACTION */
   #info {
-    display: inline-block;
+    display: none;
   }
 
   #status {
-    display: none;
+    display: inline-block;
   }
 
   #config {

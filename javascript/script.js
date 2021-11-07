@@ -1,3 +1,5 @@
+/* Variable Global estaciones registradas */
+var NumEstaciones = 6;
 
 /* FUNCIONES DE CAMBIO DE PESTAÑA */
 /* Esta función se encarga de hacer el cambio entre las pantallas sin tener que recargar la página*/
@@ -49,8 +51,6 @@
         break;
     }
   }
-
-/* FUNCIONES PARA EL ACOMODO DE ELEMENTOS */
 
 
 
@@ -106,69 +106,116 @@
   /* Coloreado de los puntos indicadores de estado */
   function colorDot(stateID,dotID)
   {
-    console.log("ColorDot-Enabled")
     var var01 = document.getElementById(stateID).innerText;
     var var02 = document.getElementById(dotID);
-    console.log(var01);
-    console.log(var02);
     switch (var01)
     {
       case "Activo":
-        console.log("Active-Dot");
         var02.style.backgroundColor = "rgb(119, 207, 124)";
         break;
       case "Inactivo":
-        console.log("Inactive-Dot");
         var02.style.backgroundColor = "rgb(219, 49, 77)";
         break;
       case "Requiere atención":
-        console.log("Atention-Dot");
         var02.style.backgroundColor = "hsl(46, 100%, 67%)";
         break;
     }
   }
 
+  /* Update de indicadores en la página web */
+
+  function updateIndicators()
+  {
+    for (let i = 1; i <= NumEstaciones; i++) 
+        {
+        let pathID = i.toString()+'Path';
+        let Status = i.toString()+'Status';
+        let dotID = i.toString()+'Dot';
+        colorMap(Status,pathID);
+        colorDot(Status,dotID);
+        }
+  }
 
   /* Inicialización de la página web */
   function firstLoad()
   {
-    /* Coloreado del mapa con estados de primera vez */
     
-    for (let i = 1; i <= 16; i++) 
+    readDataBase();
+    setInterval(function()
     {
-      let pathID = i.toString()+'Path';
-      let Status = i.toString()+'Status';
-      let dotID = i.toString()+'Dot';
-      console.log(Status);
-      console.log(dotID);
-      colorMap(Status,pathID);
-      colorDot(Status,dotID);
-    }
-    console.log("StartPage");
+      /* Actions each updtade */
+        /* Request for information in the database */
+          readDataBase();
+    },60000/20)
     
+
   }
 
 /* FUNCIONES DE CONEXIÓN A DATABASE */
-function readdatabase(){
-  var data = "";
-  var xhr = new XMLHttpRequest();
-  xhr.withCredentials = true;
-  xhr.responseType = 'json';
-
-  xhr.addEventListener("readystatechange", function() 
+  function readDataBase()
   {
-    if(this.readyState === 4) 
-    {
-      console.log("CONEXIÓN EXITOSA")
-      console.log(this.response);
-      var myObj = xhr.response;
-      console.log("RESPUESTA GUARDADA")
-      console.log(myObj[11].smax)
-      document.getElementById("output").innerHTML = myObj[11].smax;
-    }
-  });
+    var data = "";
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+    xhr.responseType = 'json';
 
-  xhr.open("GET", "http://localhost:3000/equipos");
-  xhr.send(data);
-  console.log("Lectura ejecutada")
+    xhr.addEventListener("readystatechange", function() 
+    {
+      if(this.readyState === 4) 
+      {
+        
+        console.log(this.response);
+        var lectura = xhr.response;
+        NumEstaciones = lectura.length;
+        for (let i = 1; i <= NumEstaciones; i++) 
+        {
+        console.log("Contador i: "+i);
+        let listId = i.toString()+'Id';
+        let listName = i.toString()+'Name';
+        let listStatus = i.toString()+'Status';
+        let listTime = i.toString()+'Time';
+        let listLocation = i.toString()+'Location';
+        document.getElementById(listId).innerHTML = lectura[i-1].id;
+        document.getElementById(listName).innerHTML = lectura[i-1].name;
+        document.getElementById(listStatus).innerHTML = lectura[i-1].status;
+        document.getElementById(listTime).innerHTML = lectura[i-1].lastlecture;
+        document.getElementById(listLocation).innerHTML = lectura[i-1].location;
+        }
+
+        console.log("CONEXIÓN EXITOSA")
+
+          /* Actualización de campos en la página web */
+
+          updateIndicators();
+          /* Display the last time for update */
+          lastUpdate("dateUpdate")
+          lastUpdate("dateUpdate2")
+  
+          /* Notificación de datos actualizados en consola*/
+          console.log("Datos Actualizados");
+
+        
+      }
+    });
+
+    xhr.open("GET", "http://localhost:3000/equipos");
+    xhr.send(data);
+
   }
+
+  function lastUpdate(objetiveID)
+  {
+    var date = new Date();
+    var hours = date.getHours();
+    var days = date.getDay(); 
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = date + ' ' + hours + ':' + minutes + ' ' + ampm;
+    document.getElementById(objetiveID).innerHTML = strTime;
+  }
+
+
+  
