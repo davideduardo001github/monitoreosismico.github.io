@@ -1,53 +1,36 @@
 /* Variable Global estaciones registradas */
 var NumEstaciones = 6;
+var EstadoConexion = false; 
+
+/* Dirección de conexión al servidor*/
+var ServerLink = "http://localhost:3000/equipos";
 
 /* FUNCIONES DE CAMBIO DE PESTAÑA */
 /* Esta función se encarga de hacer el cambio entre las pantallas sin tener que recargar la página*/
   function windowSwitch(input01)
   {
     console.log("windowSwitch-Enabled")
+    /* A continuación se leen los campos que serán intercambiados por la función */
     var var01 = document.getElementById("info");
     var var02 = document.getElementById("status");
-    var var03 = document.getElementById("config");
-    var var04 = document.getElementById("about");
-    var var05 = document.getElementById("acceso");
-    console.log(input01);
+    var var03 = document.getElementById("about");
+    /* En esta parte se selecciona la parte a mostrar, funciona en un estilo hide,show.. donde según el caso se muestra la sección activa y se ocultan las restantes */
     switch (input01) 
     {
       case 1:
         var01.style.display = "inline-block";
         var02.style.display = "none";
         var03.style.display = "none";
-        var04.style.display = "none";
-        var05.style.display = "none";
         break;
       case 2:
         var01.style.display = "none";
         var02.style.display = "inline-block";
         var03.style.display = "none";
-        var04.style.display = "none";
-        var05.style.display = "none";
         break;
       case 3:
         var01.style.display = "none";
         var02.style.display = "none";
         var03.style.display = "inline-block";
-        var04.style.display = "none";
-        var05.style.display = "none";
-        break;
-      case 4:
-        var01.style.display = "none";
-        var02.style.display = "none";
-        var03.style.display = "none";
-        var04.style.display = "inline-block";
-        var05.style.display = "none";
-        break;
-      case 5:
-        var01.style.display = "none";
-        var02.style.display = "none";
-        var03.style.display = "none";
-        var04.style.display = "none";
-        var05.style.display = "inline-block";
         break;
     }
   }
@@ -183,7 +166,8 @@ var NumEstaciones = 6;
         }
 
         console.log("CONEXIÓN EXITOSA")
-
+        /* Actualización de la variable de estado de conexión*/
+        EstadoConexion = true;
           /* Actualización de campos en la página web */
 
           updateIndicators();
@@ -196,13 +180,22 @@ var NumEstaciones = 6;
 
         
       }
+      else
+      {
+        /* Actualización de la variable de estado de conexión*/
+        EstadoConexion = false;
+        console.log("No hay conexión a la base de datos")
+        lastUpdate("dateUpdate")
+        lastUpdate("dateUpdate2")
+      }
     });
 
-    xhr.open("GET", "http://localhost:3000/equipos");
+    xhr.open("GET", ServerLink);
     xhr.send(data);
 
   }
 
+  /* Función que despliega la última actualización de hora de los datos */
   function lastUpdate(objetiveID)
   {
     var date = new Date();
@@ -214,7 +207,14 @@ var NumEstaciones = 6;
     hours = hours ? hours : 12; // the hour '0' should be '12'
     minutes = minutes < 10 ? '0'+minutes : minutes;
     var strTime = date + ' ' + hours + ':' + minutes + ' ' + ampm;
-    document.getElementById(objetiveID).innerHTML = strTime;
+    if (EstadoConexion)
+    {
+      document.getElementById(objetiveID).innerHTML = strTime;
+    }
+    else
+    {
+      document.getElementById(objetiveID).innerHTML = "NO SE PUDO ESTABLECER CONEXIÓN, ultimo intento: "+strTime;
+    }
   }
 
 

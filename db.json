@@ -1,0 +1,261 @@
+{
+    "equipos": 
+    [
+      { 
+        "id": "01",
+        "name" : "Álvaro Obregón",
+        "status" : "Inactivo",
+        "lastlecture" : "02:41 22/04/2021",
+        "location" : "25.78° -93.76°"        
+      },
+      { 
+        "id": "02",
+        "name" : "Azcapotzalco",
+        "status" : "Inactivo",
+        "lastlecture" : "02:26 22/10/2021",
+        "location" : "-93.76° 14.78°"        
+      },
+      { 
+        "id": "03",
+        "name" : "Benito Juárez",
+        "status" : "Inactivo",
+        "lastlecture" : "02:26 22/10/2021",
+        "location" : "-93.76° 14.78°"        
+      },
+      { 
+        "id": "04",
+        "name" : "Coyoacán",
+        "status" : "Inactivo",
+        "lastlecture" : "02:26 22/10/2021",
+        "location" : "-93.76° 14.78°"        
+      },
+      { 
+        "id": "05",
+        "name" : "Cuajimalpa de Morelos",
+        "status" : "Inactivo",
+        "lastlecture" : "02:26 22/10/2021",
+        "location" : "-93.76° 14.78°"        
+      },
+      { 
+        "id": "06",
+        "name" : "Iztacalco Prueba",
+        "status" : "Activo",
+        "lastlecture" : "02:26 22/10/2021",
+        "location" : "-93.76° 14.78°"        
+      },
+      { 
+        "id": "07",
+        "name" : "Gustavo A. Madero",
+        "status" : "Activo",
+        "lastlecture" : "17:22 27/09/2021",
+        "location" : "-93.76° 14.78°"        
+      },
+      { 
+        "id": "08",
+        "name" : "Estado México",
+        "status" : "Activo",
+        "lastlecture" : "02:26 22/10/2021",
+        "location" : "-93.76° 14.78°"        
+      }
+    ],
+    
+
+    "estacion01":
+    [
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 1, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237,
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 2, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 3, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 4, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 5, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 6, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 7, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 8, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 9, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 10, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 11, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 12, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 13, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 14, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }, 
+        {
+          "datetype": 2004, 
+          "et": 8642, 
+          "id": 15, 
+          "j2ksec": 2006, 
+          "rcnt": 22349, 
+          "rsam": 2010, 
+          "smax": 2008, 
+          "smin": 2237, 
+          "sr": 2323, 
+          "st": 1001, 
+          "tracebuf": 22305
+        }
+      ]
+}
