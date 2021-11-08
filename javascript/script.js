@@ -183,10 +183,9 @@ var ServerLink = "http://localhost:3000/equipos";
       else
       {
         /* Actualización de la variable de estado de conexión*/
-        EstadoConexion = false;
-        console.log("No hay conexión a la base de datos")
         lastUpdate("dateUpdate")
         lastUpdate("dateUpdate2")
+        EstadoConexion = false;
       }
     });
 
@@ -213,7 +212,7 @@ var ServerLink = "http://localhost:3000/equipos";
     }
     else
     {
-      document.getElementById(objetiveID).innerHTML = "NO SE PUDO ESTABLECER CONEXIÓN, ultimo intento: "+strTime;
+      document.getElementById(objetiveID).innerHTML = "NO SE PUDO ESTABLECER CONEXIÓN /n Último intento: "+strTime;
     }
   }
 
